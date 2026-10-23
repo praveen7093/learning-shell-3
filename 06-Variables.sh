@@ -4,6 +4,6 @@ echo "please enter your name::"
 read USER_NAME
 
 echo "please enter the password::"
-reas PASSWORD
+read PASSWORD
 
-echo "username is: $USERNAME passowrd is : $PASSOWRD"
+echo "username is: $USERNAME passowrd is : $PASSWORD"
