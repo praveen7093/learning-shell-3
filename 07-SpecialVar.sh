@@ -6,3 +6,7 @@ echo "first variable passed: $1"
 echo "script name :$0"
 echo "Realpath $(realpath $0)"
 echo  "who is running current script: $USER"
+echo "directoty of current running script : $PWD"
+echo "home directory of current user : $HOME"
+echo "process instance id os current script: $$"
+
