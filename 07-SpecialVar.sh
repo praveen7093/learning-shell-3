@@ -13,6 +13,6 @@ sleep 10 &
 echo "to get process instance id of the command in background: $!"
 wait $! 
 echo "Line Number: $LINENO"
-echo "previous commad exits status: #?"
+echo "previous commad exits status: $?"
 echo "total time executed for this script : $SECONDS"
 
