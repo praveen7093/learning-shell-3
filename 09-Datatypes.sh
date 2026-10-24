@@ -20,4 +20,4 @@ echo "first fruit: ${FRUITS[0]}"
 
 name="praveen kumar kola"
 
-echo "$NAMEuyuiyui"
+echo "${name}devops engineer"
