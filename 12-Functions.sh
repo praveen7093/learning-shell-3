@@ -12,7 +12,7 @@ validate(){
         echo "${2}.. is failed"
         exit 1
     else 
-        echo "${2} installation is sucess"
+        echo "${2}  is sucess"
     fi
 }
 
