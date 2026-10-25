@@ -31,7 +31,7 @@ do
         validate  $? "installing ${package}"
     else
         echo "already ${package} installed so skipping"
-    
+    fi
 done
 
 
