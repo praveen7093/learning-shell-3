@@ -12,7 +12,7 @@ usuage(){
 if [ -z "$source_dir" ]; then
     echo "ERROR :: missing parameters"
     usuage
-fir
+fi
 
 if [ -d "$source_dir" ];then
     echo "directory ${source_dir} ${R}exist"
