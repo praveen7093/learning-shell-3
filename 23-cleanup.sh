@@ -3,7 +3,7 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-source_dir =$!
+source_dir =$1
 day=${2:-14}
 
 usuage(){
