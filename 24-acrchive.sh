@@ -20,10 +20,12 @@ fi
 
 if [ ! -d "$source_dir" ]; then
     echo "source directory : $source_dir does not exisit"
+    exit 1
 fi
 
 if [ ! -d "$destination_dir" ];then
     echo "source directory : $destination_dir does not exisit"
+    exit 1
 fi
 
 
@@ -36,7 +38,7 @@ if [ -z "$files_to_archive" ]; then
 fi
 timestamp=$(date +%Y-%m-%d-%H-%M-%S)
 
-file_name="$dest_dir/logs-$timestamp.tar.gz"
+file_name="$destination_dir/logs-$timestamp.tar.gz"
 
 tar -czf $file_name $files_to_archive
 
