@@ -41,4 +41,3 @@ do
 done <<< "$files_to_delete"
 
 echo "Cleanup completed successfully"
-```
