@@ -21,14 +21,20 @@ else
     echo "${R}ERROR ${source_dir} directory does not exist"
 
 fi
-echo "scanning files older tha $days in $source_dir"
+echo "scanning files older than $days in $source_dir"
 files_to_delete =${find $source_dir -name "*.log" -type f -mtime +$days}
 
 if [ -z $files_to_delete ];then
-    echo "no log files found older tha 14 days"
+    echo "no log files found older than 14 days"
     exit 0
 fi
-while 
-do 
 
+
+while IFS= read -r line
+do 
+    echo "file is going to be deleted : $line"
 done <<< $files_to_delete
+
+
+# <  -> for filr inputs
+# <<< -> variable as input
