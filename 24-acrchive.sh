@@ -25,3 +25,12 @@ fi
 if [ ! -d "$destination_dir" ];then
     echo "source directory : $destination_dir does not exisit"
 fi
+
+
+echo "Scanning files older than $days days in $source_dir"
+files_to_archive=$(find "$source_dir" -name "*.log" -type f -mtime +"$days")
+
+if [ -z "$files_to_archive" ]; then
+    echo "No log files found older than $days days"
+    exit 0
+fi
