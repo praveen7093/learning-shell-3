@@ -38,6 +38,7 @@ while IFS= read -r line
 do
     echo "Deleting file: $line"
     rm -f -- "$line"
+    echo "file deleted : $line"
 done <<< "$files_to_delete"
 
 echo "Cleanup completed successfully"
