@@ -18,10 +18,10 @@ if [ -z "$source_dir" ] || [ -z "$destination_dir" ]; then
     usage
 fi
 
-if [! -d "$source_dir" ]; then
+if [ ! -d "$source_dir" ]; then
     echo "source directory : $source_dir does not exisit"
 fi
 
-if [! -d "$destination_dir" ];then
+if [ ! -d "$destination_dir" ];then
     echo "source directory : $destination_dir does not exisit"
 fi
