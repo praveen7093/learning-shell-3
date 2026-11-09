@@ -3,8 +3,8 @@ R=" \e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-source_dir =$1
-day=${2:-14}  # if user is not passing day we will take by default 14
+source_dir=$1
+days=${2:-14}  # if user is not passing day we will take by default 14
 
 usuage(){
     echo -e "${R}USAGE :: $0 [SOURCE_DIR] [days(optional,default to 14 days)]${N}"
