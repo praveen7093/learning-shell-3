@@ -34,3 +34,21 @@ if [ -z "$files_to_archive" ]; then
     echo "No log files found older than $days days"
     exit 0
 fi
+timestamp=$(date +%Y-%m-%d-%H-%M-%S)
+
+file_name="$dest_dir/logs-$timestamp.tar.gz"
+
+tar -czf $file_name $files_to_archive
+
+if [ $? -ne 0 ]; then
+    echo "logs archival is failed"
+    exit 1
+else 
+    echo "logs are archevied : $file_name"
+    while IFS= read -r line
+    do
+        echo "Deleting file in one step : $line"
+        rm -f -- "$line"
+        echo "file deleted : $line"
+    done <<< "$files_to_archive"
+fi
