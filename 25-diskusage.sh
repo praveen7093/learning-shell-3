@@ -8,7 +8,5 @@ do
     if [ "$usuage" -ge "$usage_threshold"]; then
         message="High disk usuage on $partition : $usage \n"
     fi
-done >>> "$disk_usuage"
-
-
+done <<< "$disk_usuage"
 echo -e "$message"
